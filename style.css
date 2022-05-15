@@ -100,7 +100,7 @@ nav {
     font-size: 25px;
     line-height: 80px;
 }
-
+/*Biografia*/
 .contenido-bio{
     width: 100%;
     height: 600px;
@@ -116,13 +116,7 @@ nav {
     animation: ease-in animat 1s;
 }
 
-@keyframes animat{
-    0%{
-        transform: scale(0);
-}100%{
-        transform: scale(1);
-}
-}
+
 
 .texto-bio{
     margin: 0 0 0 30px;
@@ -144,9 +138,19 @@ nav {
     font-weight: 400;
     text-transform: uppercase;
     font-size: 14px;
-    border-radius: 5px;
+    border: 3px solid #3c67e3;
+    border-radius: 10px;
     box-shadow: 0 8px 32px rgba(31, 222, 130, .46) ;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
+.contenido-bio a:hover{
+    animation: pulsar 2s ease-in-out;
+    -webkit-animation: pulsar 2s ease-in-out;
+}
+
 .titulo{
     font-size: 50px;
 }
@@ -205,7 +209,7 @@ nav {
 .articulo>a{
     color: #5D6678;
     font-weight: 400;
-    text-decoration: none;
+    text-decoration: none;  
 }
 .articulo>a:hover{
     color: #1FDE82;
@@ -254,8 +258,13 @@ nav {
     font-weight: 400;
     text-transform: uppercase;
     font-size: 14px;
-    border-radius: 5px;
+    border: 3px solid #3c67e3;
+    border-radius: 10px;
     box-shadow: 0 8px 32px rgba(31, 222, 130, .46) ;
+}
+.textos-hack a:hover{
+    animation: pulsar 2s ease-in-out;
+    -webkit-animation: pulsar 2s ease-in-out;
 }
 .textos-hack > i{
     font-size: 30px;
@@ -268,4 +277,170 @@ nav {
     padding-top: 20px;
     border-radius: 50%;
     box-shadow: 0 8px 32px rgba(31, 222, 130, .46);
+}
+
+/*Resultados*/
+
+.resultados{
+    background: #2570ff;
+    padding-top: 30px;
+}
+.conten-results{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.numeros{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.numeros .numero{
+    width: 45%;
+    background: rgba(255, 255, 255, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 40px 35px;
+    margin-bottom: 20px;
+}
+
+.numeros .numero h4{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.numeros .numero p{
+    color: #f2f4fc;
+    font-weight: 300;
+}
+
+.resultados-texto{
+    width: 37%;
+}
+
+.resultados-texto h4{
+    color: #fff;
+    font-size: 40px;
+}
+.resultados-texto p{
+    color: #fff;
+    font-weight: 300;
+    margin: 20px 0;
+}
+.resultados-texto>a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 10px 0;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/*Servicios*/
+.servicios{
+    display: flex;
+    justify-content: space-between;
+}
+.servicios>img{
+    width: 500px;
+}
+.box-skills{
+    margin: 30px 30px 0 0;
+}
+.box-skills h4{
+    font-size: 24px;
+    background: #f2f5fc;
+    width: 350px;
+    border-radius: 6px;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 10px;
+}
+.box-skills i{
+    color: #1FDE82;
+    font-size: 20px;
+
+}
+/*Footer*/
+footer{
+    background: #f2f2f2;
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.parteFooter{
+    width: 20%;
+    text-align: center;
+}
+.parteFooter h4{
+    color: #1d273b;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.parteFooter a{
+    display: block;
+    text-decoration: none;
+    color: #5D6678;
+    font-weight: 300;
+    transition: color .3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.parteFooter a:hover{
+    color: #1FDE82;
+}
+
+.parteFooter img{
+    width: 30%;
+}
+
+.social-media i{
+    font-size: 20px;
+    display: inline-block;
+    color: #adb6c7;
+    border: 1px solid #adb6c7;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: all ease-in-out .3s;
+    margin-right: 5px;
+
+}
+
+.social-media i:hover{
+    color: #fff;
+    background-color: #1FDE82;
+    border-color: #1FDE82;
+}
+
+/*Animaciones*/
+@keyframes animat{                 /* Animacion aparicion imagenes */
+    0%{
+        transform: scale(0);
+}100%{
+        transform: scale(1);
+}
+}
+
+@keyframes pulsar{              /*Animacion sombras de botones en biografia y ciberseguridad*/
+    0%{
+        box-shadow:
+        0 0 25px #5ddcff,
+        0 0 50px #4e00c2;
+    }
 }
